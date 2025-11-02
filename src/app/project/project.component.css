@@ -1,0 +1,143 @@
+.projects {
+  background-color: #000;
+  color: #d1d5db;
+  padding: 100px 80px;
+}
+
+.section-title {
+  color: #22c55e;
+  font-size: 2rem;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 120px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.project.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.project.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-image {
+  flex: 1;
+  min-width: 320px;
+  text-align: center;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.2);
+}
+
+.project-content {
+  flex: 1;
+  min-width: 320px;
+}
+
+.featured {
+  color: #22c55e;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.project-content h3 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.project-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.project-content li {
+  color: #9ca3af;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.tech {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 15px;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  background-color: #22c55e;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #16a34a;
+}
+
+.btn-outline {
+  border: 1px solid #22c55e;
+  color: #22c55e;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: #22c55e;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .project {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project.reverse {
+    flex-direction: column;
+  }
+
+  .project-content ul {
+    text-align: left;
+  }
+
+  .links {
+    justify-content: center;
+  }
+}

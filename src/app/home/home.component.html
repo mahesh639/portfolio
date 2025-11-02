@@ -1,0 +1,149 @@
+<!-- Hero Section -->
+<section class="section hero" id="home">
+    <div class="hero-left">
+
+        <p class="greeting">Hi, my name is</p>
+        <h1>Mahesh Gouda</h1>
+        <h2>Building the web, better.</h2>
+        <p class="subtitle">Innovating the web with purpose and precision. As a full-stack engineer, I create
+            accessible, user-friendly digital experiences that leave a lasting impact.</p>
+        <a class="btn" routerLink="/contact">Get In Touch</a>
+    </div>
+</section>
+
+<!--  About Section -->
+<section class="section about" id="about">
+    <div class="content">
+        <h2>About Me</h2>
+        <p>
+            Hi there! I'm <strong>Mahesh Gouda</strong>, a full-stack Developer specializing in
+            <strong>.NET, Angular, and SQL Server</strong>. My passion lies in developing efficient web
+            applications, managing SQL databases, and ensuring seamless deployment.
+        </p>
+        <p>
+            I am committed to creating dynamic, scalable, and user-centric web applications using
+            modern technologies. Looking forward to sharpening my skills in a challenging environment.
+            I guarantee enthusiasm in work and fulfilling my projects with inexpressible effort.
+        </p>
+    </div>
+</section>
+
+
+<!-- Experience Section -->
+<section class="section experience" id="experience">
+    <div class="content">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Software Engineer - Infosys</h3>
+                <p class="time">Jul 2022 - Mar 2025</p>
+                <ul>
+                    <li>Worked on full-stack projects from scratch requiring expertise in Angular and ASP.NET with
+                        SQL.</li>
+                    <li>Contributed to providing software solutions to clients with optimum client satisfaction.
+                    </li>
+                    <li>Implemented functionalities to handle various data requests (CRUD operations) and business
+                        logic.</li>
+                    <li>Provided proactive solutions while solving bugs and issues to meet client’s requirements.
+                    </li>
+                    <li>Developed and implemented a scalable Rest API using ASP.NET Web API.</li>
+                    <li>Developed and maintained full-stack web applications using Angular, ASP.NET Core, and SQL.
+                    </li>
+                    <li>Improved application performance by optimizing database queries and refactoring inefficient
+                        code blocks</li>
+                    <li>Worked on full-stack projects from scratch requiring expertise in Angular and ASP.NET with
+                        SQL.</li>
+
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<!--  Projects Section -->
+<section class="section projects" id="projects">
+    <div class="content">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="/assets/picture2.webp" alt="Project 1" width="400" height="400"/>
+                <h3>Healthcare Portal</h3>
+                <p>
+                    Designed a user-friendly claims resolution interface for a
+                    healthcare payer's website, ensuring accessibility and a
+                    streamlined filing process for patients.
+                    This resulted in a Quantifiable Improvement , increase in
+                    successful claim submissions and improved patient satisfaction
+                    with the appeals process
+                </p>
+            </div>
+            <div class="project-card">
+                <img src="/assets/picture1.jpg" alt="Project 2" />
+                <h3>Portfolio Website</h3>
+                <p>
+                    TravelAway is a comprehensive full-stack application designed
+                    to streamline travel management and booking processes for
+                    customers and employees.
+                    It integrates advanced technologies in the frontend and backend
+                    to provide a seamless, user-friendly experience. This project
+                    demonstrates expertise in software architecture, full-stack
+                    development, and database management.
+
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  Skills Section -->
+<section class="section skills" id="skills">
+    <div class="content">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><img src="assets/angular.png" alt="Angular" />
+                <p>Angular</p>
+            </div>
+            <div class="skill-card"><img src="assets/.net.png" alt=".NET" />
+                <p>.NET Core</p>
+            </div>
+            <div class="skill-card"><img src="assets/html.png" alt="HTML" />
+                <p>HTML5</p>
+            </div>
+            <div class="skill-card"><img src="assets/css.jpeg" alt="CSS" />
+                <p>CSS3</p>
+            </div>
+            <div class="skill-card"><img src="assets/js.png" alt="JavaScript" />
+                <p>JavaScript</p>
+            </div>
+            <div class="skill-card"><img src="assets/sql.jpeg" alt="SQL" />
+                <p>SQL Server</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  Contact Section -->
+<section class="section contact" id="contact">
+    <div class="content">
+        <h2>Contact Me</h2>
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <label>Name</label>
+            <input type="text" name="name" [(ngModel)]="name" required />
+
+            <label>Email</label>
+            <input type="text" name="email" [(ngModel)]="email" required />
+
+            <label>Message</label>
+            <textarea name="message" rows="5" ngModel [(ngModel)]="message" required></textarea>
+
+            <button type="submit" [disabled]="!contactForm.valid">Send</button>
+        </form>
+    </div>
+</section>
+
+<!--  Footer -->
+<!-- <footer class="footer">
+    <p>© 2025 Mahesh Gouda | Built with ❤️ using Angular</p>
+</footer> -->
