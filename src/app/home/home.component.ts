@@ -1,4 +1,5 @@
 import { AfterViewInit, Component,ElementRef } from '@angular/core';
+import { environment } from '../../environments/environment.development';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,13 @@ export class HomeComponent implements AfterViewInit {
     alert('Message sent successfully!');
   }
 
+  myname = environment.name;
+  tagline = environment.tagLine;
+  homeAbout = environment.homeAbout;
+  experience = environment.experienceNotes;
+  skills = environment.skills;
+  projects = environment.projects;
+  
   name = '';
   email = '';
   message = '';

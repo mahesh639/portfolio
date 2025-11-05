@@ -3,13 +3,13 @@
         <h2>Contact Me</h2>
         <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
             <label>Name</label>
-            <input type="text" name="name" [(ngModel)]="name" required />
+            <input type="text" name="name" [(ngModel)]="formData.name" required />
 
             <label>Email</label>
-            <input type="text" name="email" [(ngModel)]="email" required />
+            <input type="text" name="email" [(ngModel)]="formData.email" required />
 
             <label>Message</label>
-            <textarea name="message" rows="5" ngModel [(ngModel)]="message" required></textarea>
+            <textarea name="message" rows="5" ngModel [(ngModel)]="formData.message" required></textarea>
 
             <button type="submit" [disabled]="!contactForm.valid">Send</button>
         </form>

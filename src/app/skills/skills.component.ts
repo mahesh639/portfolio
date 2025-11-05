@@ -1,4 +1,5 @@
 import { AfterViewInit, Component,ElementRef } from '@angular/core';
+import { environment } from '../../environments/environment.development';
 
 @Component({
   selector: 'app-skills',
@@ -6,6 +7,8 @@ import { AfterViewInit, Component,ElementRef } from '@angular/core';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent implements AfterViewInit{
+
+  skills= environment.skills;
 
    constructor(private el: ElementRef) {}
   

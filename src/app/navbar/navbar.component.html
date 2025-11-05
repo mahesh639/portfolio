@@ -1,6 +1,6 @@
-<header class="navbar">
+<header class="navbar" [class.Hidden]="isHidden">
 <div class="nav-inner">
-<a class="logo" routerLink="/">Mahesh</a>
+<a class="logo" routerLink="/">M</a>
 <nav class="nav-links">
 <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
 <a routerLink="/about" routerLinkActive="active">About</a>
@@ -8,7 +8,7 @@
 <a routerLink="/projects" routerLinkActive="active">Projects</a>
 <a routerLink="/skills" routerLinkActive="active">skills</a>
 <a routerLink="/contact" routerLinkActive="active">Contact</a>
-<a class="resume-btn" href="assets\MaheshGoudaResume.pdf" target="_blank">Resume</a>
+<a class="resume-btn" *ngFor="let res of resume" href="{{res.cv}}" target="_blank">{{res.name}}</a>
 </nav>
 <button class="mobile-toggle" (click)="toggleMobile()">☰</button>
 </div>

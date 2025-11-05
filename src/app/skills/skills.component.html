@@ -2,24 +2,10 @@
     <div class="content">
         <h2>Skills</h2>
         <div class="skills-grid">
-            <div class="skill-card"><img src="assets/angular.png" alt="Angular" />
-                <p>Angular</p>
+            <div class="skill-card" *ngFor="let skill of skills"><img [src]="skill.imgsrc" alt="Angular" />
+                <p>{{skill.name}}</p>
             </div>
-            <div class="skill-card"><img src="assets/.net.png" alt=".NET" />
-                <p>.NET Core</p>
-            </div>
-            <div class="skill-card"><img src="assets/html.png" alt="HTML" />
-                <p>HTML5</p>
-            </div>
-            <div class="skill-card"><img src="assets/css.jpeg" alt="CSS" />
-                <p>CSS3</p>
-            </div>
-            <div class="skill-card"><img src="assets/js.png" alt="JavaScript" />
-                <p>JavaScript</p>
-            </div>
-            <div class="skill-card"><img src="assets/sql.jpeg" alt="SQL" />
-                <p>SQL Server</p>
-            </div>
+           
         </div>
     </div>
 </section>

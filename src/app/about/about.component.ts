@@ -1,4 +1,5 @@
 import { AfterViewInit, Component ,ElementRef } from '@angular/core';
+import { environment } from '../../environments/environment.development';
 
 @Component({
   selector: 'app-about',
@@ -6,6 +7,8 @@ import { AfterViewInit, Component ,ElementRef } from '@angular/core';
   styleUrl: './about.component.css'
 })
 export class AboutComponent implements AfterViewInit {
+
+  about = environment.homeAbout;
 
   constructor(private el: ElementRef) {}
 
