@@ -1,11 +1,11 @@
 export const environment = {
     name: 'Mahesh Gouda',
     tagLine: 'Innovating the web with purpose and precision. As a full-stack engineer, I create accessible, user-friendly digital experiences that leave a lasting impact.',
-    homeAbout: 'Hi there! I am Mahesh Gouda, a full-stack Developer specializing in .NET, Angular, and SQL Server. My passion lies in developing efficient web applications, managing SQL databases, and ensuring seamless deployment.I am committed to creating dynamic, scalable, and user-centric web applications using modern technologies. Looking forward to sharpening my skills in a challenging environment. I guarantee enthusiasm in work and fulfilling my projects with inexpressible effort.',
+    homeAbout:'Hi there! I am Mahesh Gouda, a full-stack Developer specializing in .NET, Angular, and SQL Server. My passion lies in developing efficient web applications, managing SQL databases, and ensuring seamless deployment.I am committed to creating dynamic, scalable, and user-centric web applications using modern technologies. Looking forward to sharpening my skills in a challenging environment. I guarantee enthusiasm in work and fulfilling my projects with inexpressible effort.',
     projects: [
         {
             title: 'Optimization of Claims Resolution Platform',
-            image: '/assets/picture2.webp',
+            image: 'assets/healthcare.jpeg',
             details: [
                 'Designed a user-friendly claims resolution interface for ahealthcare payers website, ensuring accessibility and a streamlined filing process for patients.',
                 'This resulted in a Quantifiable Improvement , increase insuccessful claim submissions and improved patient satisfactionwith the appeals process.'
@@ -16,7 +16,7 @@ export const environment = {
         },
         {
             title: 'TravelAway Website',
-            image: '/assets/picture1.jpg',
+            image: 'assets/travel.jpeg',
             details: [
                 'TravelAway is a comprehensive full-stack application designedto streamline travel management and booking processes forcustomers and employees.',
                 'It integrates advanced technologies in the frontend and backend to provide a seamless, user-friendly experience. This project demonstrates expertise in software architecture, full-stack development, and database management.'
@@ -40,39 +40,72 @@ export const environment = {
         "Worked on full-stack projects from scratch requiring expertise in Angular and ASP.NET with SQL."
     ],
 
-    skills: [
+    skills : [
         {
-            name: "angular",
+            name: "Angular",
             imgsrc: "assets/angular.png"
         },
         {
-            name: ".net core",
-            imgsrc: "assets/.net.png"
+            name: "React",
+            imgsrc: "assets/react.png"
         },
         {
-            name: "html",
+            name: "Python",
+            imgsrc: "assets/python.jpeg"
+        },
+        {
+            name: ".Net core",
+            imgsrc : "assets/netcore.jpeg"
+        },
+        {
+            name: "Api",
+            imgsrc: "assets/Api.jpeg"
+        },
+        {
+            name: "EF Core",
+            imgsrc: "assets/Api.jpeg"
+        },
+        {
+            name : "Html",
             imgsrc: "assets/html.png"
         },
         {
-            name: "css",
+            name :"Css",
             imgsrc: "assets/css.jpeg"
         },
         {
-            name: "js",
-            imgsrc: "assets/js.png"
+            name:"JavaScript",
+            imgsrc:"assets/js.png"
 
         },
         {
-            name: "sql",
-            imgsrc: "assets/sql.jpeg"
+            name: "TypeScript",
+            imgsrc: "assets/Typescript.png"
+        },
+        {
+            name:"MSSQL",
+            imgsrc:"assets/sql.jpeg"
+        },
+        {
+            name: "Azure",
+            imgsrc: "assets/Azure.jpeg"
+        },
+        {
+            name: "Aws",
+            imgsrc: "assets/Aws.jpeg"
+        },
+        {
+            name: "Github",
+            imgsrc: "assets/Github.png"
         }
     ],
-    resume: [
+    resume:[
         {
-            name: "Resume",
-            cv: "assets/MaheshGoudaResume.pdf"
+            name:"Resume",
+            cv:"assets/MaheshGoudaResume.pdf"
         }
 
     ],
-    footer: 'Made with ❤️ by Mahesh Gouda '
+
+    footer:'Made with ❤️ by Mahesh Gouda '
 };

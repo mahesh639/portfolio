@@ -55,7 +55,7 @@ export const environment = {
         },
         {
             name: ".Net core",
-            imgsrc : "assets/.netcore.jpeg"
+            imgsrc : "assets/netcore.jpeg"
         },
         {
             name: "Api",
