@@ -5,7 +5,7 @@ export const environment = {
     projects: [
         {
             title: 'Optimization of Claims Resolution Platform',
-            image: '/assets/picture2.webp',
+            image: 'assets/healthcare.jpeg',
             details: [
                 'Designed a user-friendly claims resolution interface for ahealthcare payers website, ensuring accessibility and a streamlined filing process for patients.',
                 'This resulted in a Quantifiable Improvement , increase insuccessful claim submissions and improved patient satisfactionwith the appeals process.'
@@ -16,7 +16,7 @@ export const environment = {
         },
         {
             title: 'TravelAway Website',
-            image: '/assets/picture1.jpg',
+            image: 'assets/travel.jpeg',
             details: [
                 'TravelAway is a comprehensive full-stack application designedto streamline travel management and booking processes forcustomers and employees.',
                 'It integrates advanced technologies in the frontend and backend to provide a seamless, user-friendly experience. This project demonstrates expertise in software architecture, full-stack development, and database management.'
@@ -55,7 +55,7 @@ export const environment = {
         },
         {
             name: ".Net core",
-            imgsrc : "assets/.net.png"
+            imgsrc : "assets/.netcore.jpeg"
         },
         {
             name: "Api",
