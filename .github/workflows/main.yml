@@ -1,31 +1,40 @@
-name: Deploy Angular App to GitHub Pages
+name: 🚀 Auto-Deploy Angular Portfolio to GitHub Pages
 
 on:
   push:
     branches:
-      - master  # or master, depending on your branch name
+      - main
+      - master  # Works with either branch
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Step 2: Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
 
-      - name: Build Angular project
-        run: npm run build -- --configuration production --base-href "/mahesh_portfolio/"
+      # Step 4: Build Angular app with dynamic base href
+      - name: Build Angular app
+        run: |
+          echo "Building with base href: /${{ github.event.repository.name }}/"
+          npm run build -- --configuration production --base-href "/${{ github.event.repository.name }}/"
 
+      # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/mahesh_portfolio/browser
+          publish_dir: ./dist/mahesh-portfolio/browser
+          enable_jekyll: true
