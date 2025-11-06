@@ -29,6 +29,6 @@ jobs:
       if: success()
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GH_TOKEN }}
+        github_token: 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
         publish_dir: dist/mahesh-portfolio/browser
         enable_jekyll: true
