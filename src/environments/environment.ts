@@ -66,6 +66,11 @@ export const environment = {
             imgsrc: "assets/Api.jpeg"
         },
         {
+            name: "C#",
+            imgsrc: "assets/c.png"
+
+        },
+        {
             name : "Html",
             imgsrc: "assets/html.png"
         },
