@@ -1,34 +1,31 @@
-name: GitHub Pages
+name: Deploy Angular App to GitHub Pages
 
 on:
   push:
     branches:
-    - master
+      - master  # or master, depending on your branch name
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-    - name: Install dependencies
-      run: |
-        npm install
-      
-    - name: Build
-      run: |
-        npm run build
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Deploy
-      if: success()
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: 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
-        publish_dir: dist/mahesh-portfolio/browser
-        enable_jekyll: true
+      - name: Build Angular project
+        run: npm run build -- --configuration production --base-href "/mahesh_portfolio/"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./dist/mahesh_portfolio/browser
