@@ -1,34 +1,47 @@
-name: GitHub Pages
+name: 🚀 Auto Deploy Angular App to GitHub Pages
 
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      # Step 1: Checkout the repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20'
+      # Step 2: Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-    - name: Install dependencies
-      run: |
-        npm install
-      
-    - name: Build
-      run: |
-        npm run build
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
 
-    - name: Deploy
-      if: success()
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GH_TOKEN}}
-        publish_dir: dist/mahesh-portfolio/browser
-        enable_jekyll: true
+      # Step 4: Detect Angular project name automatically
+      - name: Detect Angular project name
+        id: detect
+        run: |
+          PROJECT_NAME=$(node -p "Object.keys(require('./angular.json').projects)[0]")
+          echo "project_name=$PROJECT_NAME" >> $GITHUB_OUTPUT
+          echo "Detected Angular project: $PROJECT_NAME"
+
+      # Step 5: Build Angular app with dynamic base-href and output path
+      - name: Build Angular app
+        run: |
+          echo "Building project '${{ steps.detect.outputs.project_name }}' with base-href '/${{ github.event.repository.name }}/'"
+          npm run build -- --configuration production --base-href "/${{ github.event.repository.name }}/"
+
+      # Step 6: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/${{ steps.detect.outputs.project_name }}/browser
+          enable_jekyll: true
